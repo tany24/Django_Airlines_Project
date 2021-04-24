@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> app2 tryout</title>
+    <link rel="stylesheet" href="{% static "css/example-style.css" %}">
+  </head>
+  <body>
+
+    <h1>Here are your Users :</h1>
+    {% if user_info %}
+    <ol>
+      {% for n in user_info %}
+      <p>User Info</p>
+      <ul>
+        <p>First Name : {{ n.first_name }}</p>
+        <p>Last Name  : {{ n.first_name }}</p>
+        <p>Email ID   : {{ n.first_name }}</p>
+      </ul>
+      {% endfor %}
+    </ol>
+
+    {% else %}
+      <p>No User Record Data Available</p>
+    {% endif %}
+
+  </body>
+</html>
